@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+	<meta charset="utf-8">
+	<title>Radio Button</title>
+</head>
+<body ng-controller="appController">
+
+	<div>
+		<input type="radio" id="tab1" ng-model="tab.name" value="tab1" ng-change="changeTab('tab1')"> <label for="tab1">Yes</label>
+		<input type="radio" id="tab2" ng-model="tab.name" value="tab2" ng-change="changeTab('tab2')"> <label for="tab2">No</label>
+	</div>
+
+	<div ng-if="tab.name === 'tab1'">
+		<h2>Hello World</h2>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
